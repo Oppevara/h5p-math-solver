@@ -1,0 +1,188 @@
+[
+  {
+    "name": "question",
+    "type": "text",
+    "widget": "html",
+    "tags": [
+      "p",
+      "br",
+      "strong",
+      "em"
+    ],
+    "label": "Question",
+    "importance": "high"
+  },
+  {
+    "name": "expression",
+    "type": "text",
+    "widget": "html",
+    "tags": [
+      "p",
+      "eqneditor"
+    ],
+    "label": "Math expression",
+    "importance": "high"
+  },
+  {
+    "name": "variables",
+    "type": "list",
+    "label": "List of variables",
+    "importance": "high",
+    "entity": "variable",
+    "min": 1,
+    "max": 4,
+    "defaultNum": 2,
+    "optional": true,
+    "field": {
+      "name": "Variable",
+      "type": "group",
+      "isSubContent": true,
+      "label": "Variable and it's range",
+      "description": "Variables used in the expression and their ranges, The system will pick all integers randomly from the range and replace the variables. The correct answer is calculated based on the generated variables.",
+      "importance": "high",
+      "optional": true,
+      "fields": [
+        {
+          "name": "identifier",
+          "type": "select",
+          "label": "Variable identifier",
+          "description": "Identifier used in above expression, will be replaced by a random integer in the range",
+          "options": [
+            {
+              "value": "var-a",
+              "label": "A"
+            },
+            {
+              "value": "var-b",
+              "label": "B"
+            },
+            {
+              "value": "var-c",
+              "label": "C"
+            },
+            {
+              "value": "var-d",
+              "label": "D"
+            }
+          ]
+        },
+        {
+          "name": "min-value",
+          "type": "number",
+          "label": "Minimum value"
+        },
+        {
+          "name": "max-value",
+          "type": "number",
+          "label": "Maximum value"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "tipsAndFeedback",
+    "type": "group",
+    "label": "Hint",
+    "importance": "low",
+    "optional": true,
+    "fields": [
+      {
+        "name": "tip",
+        "type": "text",
+        "widget": "html",
+        "label": "Hint text",
+        "importance": "low",
+        "description": "Hint for the user. This will appear in a popup next to the answer box",
+        "optional": true,
+        "tags": [
+          "p",
+          "br",
+          "strong",
+          "em",
+          "a"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioural settings",
+    "importance": "low",
+    "fields": [
+      {
+        "name": "soundEffectsEnabled",
+        "type": "boolean",
+        "label": "Enable sound effects",
+        "importance": "low",
+        "default": true
+      },
+      {
+        "name": "enableRetry",
+        "type": "boolean",
+        "label": "Enable retry button",
+        "importance": "low",
+        "default": true
+      },
+      {
+        "name": "enableSolutionsButton",
+        "type": "boolean",
+        "label": "Enable show solution button",
+        "importance": "low",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "Localize single choice set",
+    "importance": "low",
+    "common": true,
+    "fields": [
+      {
+        "name": "showSolutionButtonLabel",
+        "type": "text",
+        "label": "Label for the \"Show solution\" button",
+        "importance": "low",
+        "default": "Show solution"
+      },
+      {
+        "name": "retryButtonLabel",
+        "type": "text",
+        "label": "Label for the \"Retry\" button",
+        "importance": "low",
+        "default": "Retry"
+      },
+      {
+        "name": "correctText",
+        "type": "text",
+        "label": "Readspeaker text for correct answer",
+        "importance": "low",
+        "default": "Correct!"
+      },
+      {
+        "name": "incorrectText",
+        "type": "text",
+        "label": "Readspeaker text for incorrect answer",
+        "importance": "low",
+        "default": "Incorrect!"
+      },
+      {
+        "name": "muteButtonLabel",
+        "type": "text",
+        "label": "Label for the \"mute\" button, to disable feedback sound",
+        "importance": "low",
+        "default": "Mute feedback sound"
+      },
+      {
+        "name": "closeButtonLabel",
+        "type": "text",
+        "label": "Label for the \"Close\" button",
+        "importance": "low",
+        "default": "Close"
+      }
+    ]
+  }
+]

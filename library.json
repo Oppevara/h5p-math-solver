@@ -1,0 +1,16 @@
+{
+  "title": "Math Solver",
+  "description": "Evaluates math expressions and compares user input",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "author": "HTK",
+  "license": "MIT",
+  "machineName": "H5P.MathSolver",
+  "preloadedJs": [
+    {
+      "path": "scripts/index.js"
+    }
+  ]
+}
